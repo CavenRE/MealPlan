@@ -144,3 +144,7 @@ Thumbs.db
 
 # The actual ignore
 config.py
+profiles/
+profiles/*.*
+
+

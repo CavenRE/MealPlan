@@ -2,23 +2,23 @@ import sys
 import items
 import meals
 import create
+import profiles
 
-# Add the following code to the end of the file:
 def display_menu():
     print("Select an option:")
-    print("1] Meals (0)")
+    print("1] Meals")
     print("2] Create")
-    print("3] Items (40)")
+    print("3] Items")
     print("4] Update")
+    print("5] Profiles")
+    print("6] Exit")
 
-# Add the following code to the end of the file:
 def display_items_menu():
     print("Select a category:")
     for i, category in enumerate(items.categories.keys(), 1):
         print(f"{i}] {category.capitalize()}")
     print("9] Back")
 
-# Add the following code to the end of the file:
 def main():
     while True:
         display_menu()
@@ -44,6 +44,10 @@ def main():
                     print("Invalid choice. Please try again.")
         elif choice == '4':
             items.update_nutrition_data()
+        elif choice == '5':
+            profiles.manage_profiles()
+        elif choice == '6':
+            sys.exit()
         else:
             print("Invalid choice. Please try again.")
 
